@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a9151b">
+  <meta name="description" content="Website Koperasi Sekolah SMK Cambridge">
+  <title>Koperasi SMK Cambridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#beranda" aria-label="Koperasi SMK Cambridge"><img src="logo.jpg" alt="" width="35"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav id="mainNav">
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#servis">Servis</a>
+      <a href="#kontak">Kontak</a>
+      <button class="account-btn" id="accountBtn">ACCOUNT</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="beranda">
+      <div class="hero-content">
+        <p class="eyebrow">KOPERASI SEKOLAH</p>
+        <h1>MK CAMBRIDGE</h1>
+        <p class="hero-subtitle">Selamat Datang Di Website</p>
+        <p class="hero-small">koperasi smk cambridge</p>
+        <a class="btn" href="#produk">Lihat Sekarang</a>
+      </div>
+    </section>
+
+    <section class="services section" id="layanan">
+      <div class="container">
+        <div class="section-heading left">
+          <h2>Layanan Kami</h2>
+          <p>meliputi:</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon"><img src="atribut.jpg" alt="" width="110"></div>
+            <h3>atribut cekolah</h3>
+            <p>atribut</p>
+            <a class="btn btn-small" href="#produk">Lihat Sekarang</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" ><img src="alat.jpg" alt="" width="110"></div>
+            <h3>Alat Tulis</h3>
+            <p>ATK dan perlengkapan belajar.</p>
+            <a class="btn btn-small" href="#produk">Lihat Sekarang</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><img src="baju.jpg" alt="" width="110"></div>
+            <h3>Seragam</h3>
+            <p>Keperluan seragam.</p>
+            <a class="btn btn-small" href="#produk">Lihat Sekarang</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">x</div>
+            <h3>perlu bantuan sekarang?</h3>
+            <p>hubungi kami disini</p>
+            <a class="btn btn-small" href="#kontak">Lihat Sekarang</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section">
+      <div class="about-shape" aria-hidden="true"></div>
+      <div class="container about-inner">
+        <div></div>
+        <div class="about-content">
+          <h2>Tentang Koperasi<br><span>SMK CAMBRIDGE</span></h2>
+          <p>Koperasi sekolah kami berdiri sejak 1956, yang bertujuan mempermudah interaksi antara siswa dan sekolah.</p>
+          <a class="btn" href="#produk">Kunjungi Produk</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section" id="produk">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>Produk Kami</h2>
+          <p>Pilih produk yang kamu butuhkan.</p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="service-page section" id="servis">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>Berikut Adalah Servis Kami</h2>
+          <p>Layanan bantuan untuk siswa dan sekolah.</p>
+        </div>
+        <div class="service-cta">
+          <h3>Ada Masalah?</h3>
+          <a class="btn" href="#kontak">Hubungi Kami</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="kontak">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>Berikut Adalah Contact Kami</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <div class="info-row"><span class="info-icon">📍</span><span>Kp. Babakan Peteuy</span></div>
+            <div class="info-row"><span class="info-icon">✉</span><span>smkmuthia@gmail.com</span></div>
+            <div class="info-row"><span class="info-icon">☎</span><span>+62 85794967287</span></div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <input id="contactName" type="text" placeholder="Masukan Nama Kamu" required>
+            <input id="contactEmail" type="email" placeholder="Masukan Email Kamu" required>
+            <textarea id="contactMessage" placeholder="Pesan...." required></textarea>
+            <button class="btn" type="submit">Kirim Pesan</button>
+            <p class="form-status" id="contactStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>@smk.cambridge_</p>
+    <p>© <span id="year"></span> Koperasi SMK Cambridge</p>
+  </footer>
+
+  <div class="modal hidden" id="accountModal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+    <div class="modal-box">
+      <button class="modal-close" data-close="accountModal">×</button>
+      <h2 id="accountTitle">Account</h2>
+      <p>Mode akun demo. Data hanya tersimpan di browser ini.</p>
+      <input id="username" type="text" placeholder="Nama pengguna">
+      <button class="btn full" id="saveAccount">Simpan Akun</button>
+      <button class="text-btn" id="logoutBtn">Keluar</button>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productTitle">
+    <div class="modal-box product-modal">
+      <button class="modal-close" data-close="productModal">×</button>
+      <img id="modalProductImage" src="" alt="">
+      <h2 id="productTitle"></h2>
+      <p id="productDescription"></p>
+      <strong id="productPrice"></strong>
+      <div class="qty">
+        <button id="minusQty">−</button>
+        <span id="qtyValue">1</span>
+        <button id="plusQty">+</button>
+      </div>
+      <button class="btn full" id="addCartBtn">Tambah ke Keranjang</button>
+    </div>
+  </div>
+
+  <div class="cart-fab" id="cartFab" title="Keranjang">
+    🛒 <span id="cartCount">0</span>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
